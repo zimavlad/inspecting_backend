@@ -1,0 +1,17 @@
+doctype html
+html(lang='ru')
+	head
+		meta(charset='utf-8')
+		title Предложение
+		link(rel='stylesheet', href='/styles.css')
+
+	body
+		main.page
+			if username
+				h1 Привет #{username}
+			else 
+				h1 Вход
+				
+				form(method="POST")
+					input(type="text" name="username")
+				button(type="submit") Войти
